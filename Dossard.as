@@ -1,5 +1,4 @@
 void Dossard() {
-
     CTrackMania@ app = cast<CTrackMania>(GetApp());
     if (app !is null) {
         auto playground = cast<CSmArenaClient>(app.CurrentPlayground);
@@ -9,9 +8,12 @@ void Dossard() {
 
             if (script !is null) {
 
-                string Trigram = script.Dossard_Trigram;
-
-                print(Trigram);
+                script.Dossard_Trigram = Trigram;
+                
+                if (script.Dossard_Trigram != "") {
+                    print(script.Dossard_Trigram);
+                }
+                
             }
         }
     }
