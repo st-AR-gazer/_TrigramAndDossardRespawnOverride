@@ -1,3 +1,4 @@
+int lastRunTime = 0;
 int counter = 0;
 
 void Dossard() {
@@ -14,13 +15,16 @@ void Dossard() {
                     print(script.CurrentRaceTime);
                 }
 
+                int currentTime = script.StartTime;
                 
-                if (script.CurrentRaceTime <= 0) {
-                    counter++;
-                    string counterStr = "" + counter;
-                    print(counterStr);
+                if (currentTime - lastRunTime >= 500) {
+                    if (script.CurrentRaceTime <= 0) {
+                        counter++;
+                        string counterStr = "" + counter;
+                        print(counterStr);
+                        lastRunTime = currentTime;
+                    }
                 }
-            
                 
 
                 script.Dossard_Trigram = Trigram;
