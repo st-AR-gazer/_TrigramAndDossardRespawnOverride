@@ -25,14 +25,10 @@ void Dossard() {
                         lastRunTime = currentTime;
                     }
                 }
-                
+
+                string Trigram = "" + counter;
 
                 script.Dossard_Trigram = Trigram;
-                
-                if (script.Dossard_Trigram != "") {
-                    print(script.Dossard_Trigram);
-                }
-                
             }
         }
     }
