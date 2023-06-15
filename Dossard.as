@@ -1,3 +1,5 @@
+int counter = 0;
+
 void Dossard() {
     CTrackMania@ app = cast<CTrackMania>(GetApp());
     if (app !is null) {
@@ -7,6 +9,19 @@ void Dossard() {
             auto script = cast<CSmScriptPlayer>(playground.Arena.Players[0].ScriptAPI);
 
             if (script !is null) {
+
+                if (test) {
+                    print(script.CurrentRaceTime);
+                }
+
+                
+                if (script.CurrentRaceTime <= 0) {
+                    counter++;
+                    string counterStr = "" + counter;
+                    print(counterStr);
+                }
+            
+                
 
                 script.Dossard_Trigram = Trigram;
                 
