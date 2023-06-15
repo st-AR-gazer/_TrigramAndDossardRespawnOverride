@@ -7,7 +7,7 @@ void Render() {
             auto script = cast<CSmScriptPlayer>(playground.Arena.Players[0].ScriptAPI);
 
             if (script !is null) {
-                Dossard(script);
+                Dossard();
             }
         }
     }
