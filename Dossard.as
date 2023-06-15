@@ -8,7 +8,10 @@ void Dossard() {
             auto script = cast<CSmScriptPlayer>(playground.Arena.Players[0].ScriptAPI);
 
             if (script !is null) {
+
                 string Trigram = script.Dossard_Trigram;
+
+                print(Trigram);
             }
         }
     }
