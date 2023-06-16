@@ -29,9 +29,7 @@ void Dossard() {
                 string Trigram = "" + counter;
 
                 script.Dossard_Trigram = Trigram;
-
-                
-
+                script.Dossard_Number = "AR";
             }
         }
     }
