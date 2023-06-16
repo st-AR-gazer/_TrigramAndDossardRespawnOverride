@@ -9,8 +9,9 @@ void Dossard() {
         if (playground !is null && playground.Arena.Players.Length > 0) {
             auto script = cast<CSmScriptPlayer>(playground.Arena.Players[0].ScriptAPI);
 
-            if (script !is null) {
-
+            if (script is null) {
+                counter = 0; // Set counter to 0 when script is null
+            } else {
                 if (test) {
                     print(script.CurrentRaceTime);
                 }
@@ -31,7 +32,6 @@ void Dossard() {
                 script.Dossard_Trigram = Trigram;
                 script.Dossard_Number = Number;
             }
-            
         }
     }
 }
